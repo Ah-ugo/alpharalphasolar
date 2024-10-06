@@ -227,7 +227,7 @@ export default () => {
   useEffect(() => {
     document.onclick = (e) => {
       const target = e.target;
-      if (!target.closest(".nav-menu"))
+      if (!target?.closest(".nav-menu"))
         setDrapdownState({ isActive: false, idx: null });
     };
   }, []);
@@ -350,32 +350,34 @@ export default () => {
                     drapdownState.isActive ? (
                       <div className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:shadow-md md:mt-0">
                         <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
-                          {item?.navs.map((dropdownItem, idx) => (
+                          {item?.navs?.map((dropdownItem: any, idx: any) => (
                             <li key={idx}>
                               <p className="text-indigo-600 text-sm">
                                 {dropdownItem.label}
                               </p>
                               <ul className="mt-5 space-y-6">
-                                {dropdownItem.navs.map((navItem, idx) => (
-                                  <li key={idx} className="group">
-                                    <a
-                                      href={navItem.path}
-                                      className="flex gap-3 items-center"
-                                    >
-                                      <div className="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center duration-150 group-hover:bg-indigo-600 group-hover:text-white md:w-14 md:h-14">
-                                        {navItem.icon}
-                                      </div>
-                                      <div>
-                                        <span className="text-gray-800 duration-200 group-hover:text-indigo-600 text-sm font-medium md:text-base">
-                                          {navItem.title}
-                                        </span>
-                                        <p className="text-sm text-gray-600 group-hover:text-gray-800 mt-1">
-                                          {navItem.desc}
-                                        </p>
-                                      </div>
-                                    </a>
-                                  </li>
-                                ))}
+                                {dropdownItem.navs.map(
+                                  (navItem: any, idx: any) => (
+                                    <li key={idx} className="group">
+                                      <a
+                                        href={navItem.path}
+                                        className="flex gap-3 items-center"
+                                      >
+                                        <div className="w-12 h-12 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center duration-150 group-hover:bg-indigo-600 group-hover:text-white md:w-14 md:h-14">
+                                          {navItem.icon}
+                                        </div>
+                                        <div>
+                                          <span className="text-gray-800 duration-200 group-hover:text-indigo-600 text-sm font-medium md:text-base">
+                                            {navItem.title}
+                                          </span>
+                                          <p className="text-sm text-gray-600 group-hover:text-gray-800 mt-1">
+                                            {navItem.desc}
+                                          </p>
+                                        </div>
+                                      </a>
+                                    </li>
+                                  )
+                                )}
                               </ul>
                             </li>
                           ))}

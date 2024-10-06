@@ -3,8 +3,8 @@ import FeaturedCard from "./ComponentAsset/FeaturedCard";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Animated } from "react-animated-css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// import AOS from "aos";
+// import "aos/dist/aos.css";
 import { motion, useScroll, Variants } from "framer-motion";
 
 const responsive = {
