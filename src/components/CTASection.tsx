@@ -1,12 +1,12 @@
 // import React from "react";
-import { motion, useScroll, Variants } from "framer-motion";
-import bgImg from "../assets/heroSectionBackground.webp";
+import { motion } from "framer-motion";
+import bgImg from "../assets/heroSectionBackground-2.png";
 // import openingVid from "../assets/headerOpening-2.gif";
 
 export default function CTASection() {
   return (
     <div className="relative bg-gray-900">
-      <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+      <div className="relative h-80 overflow-hidden bg-white md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
         <img className="h-full w-full object-cover" src={bgImg} alt="" />
         <svg
           viewBox="0 0 926 676"

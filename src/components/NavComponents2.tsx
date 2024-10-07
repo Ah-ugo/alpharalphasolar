@@ -217,7 +217,7 @@ export default () => {
     //   isDrapdown: true,
     //   navs: dropdownNavs,
     // },
-    { title: "Home", path: "javascript:void(0)", isDrapdown: false },
+    { title: "Home", path: "javascript:void(0)", isDrapdown: false, navs: [] },
     { title: "About Us", path: "javascript:void(0)", isDrapdown: false },
     { title: "Contact Us", path: "javascript:void(0)", isDrapdown: false },
     { title: "Shop", path: "javascript:void(0)", isDrapdown: false },

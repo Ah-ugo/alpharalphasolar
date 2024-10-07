@@ -1,4 +1,4 @@
-import { Button } from "@headlessui/react";
+import { Button } from "@chakra-ui/react";
 import { FaCircleArrowRight } from "react-icons/fa6";
 
 function PostDetails() {
@@ -30,9 +30,9 @@ function PostImageCard({ src, className }: any) {
           size="large"
           variant="text"
           className="p-0"
-          endAdornment={
-            <FaCircleArrowRight className="size-6 stroke-inherit" />
-          }
+          // endAdornment={
+          //   <FaCircleArrowRight className="size-6 stroke-inherit" />
+          // }
         >
           Read More
         </Button>
