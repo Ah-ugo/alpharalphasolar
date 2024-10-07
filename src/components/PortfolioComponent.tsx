@@ -1,4 +1,3 @@
-import React from "react";
 import PortfolioCard from "./ComponentAsset/PortfolioCard";
 
 export default function PortfolioComponent() {

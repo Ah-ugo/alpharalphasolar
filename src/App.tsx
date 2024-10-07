@@ -1,25 +1,25 @@
-import { useState } from "react";
+// import { useState } from "react";
 import HeroSection4 from "./components/HeroSection4";
-import HeroSection3 from "./components/HeroSection3";
-import { Header2 } from "./components/HeroSection";
+// import HeroSection3 from "./components/HeroSection3";
+// import { Header2 } from "./components/HeroSection";
 import { Header } from "./components/HeroSection2";
 import FeatureSection from "./components/FeatureSection";
 // import { FeaturesSection } from "./components/FeatureSection";
 import FeaturedItems from "./components/FeaturedItems";
 import CTASection from "./components/CTASection";
 import FooterSection from "./components/FooterSection";
-import OurTeam from "./components/OurTeam";
+// import OurTeam from "./components/OurTeam";
 import NavComponents2 from "./components/NavComponents2";
-import Navbar from "./components/NavComponents";
+// import Navbar from "./components/NavComponents";
 import PortfolioComponent from "./components/PortfolioComponent";
 import "animate.css";
-import { Fab, Action } from "react-tiny-fab";
+import { Fab } from "react-tiny-fab";
 import "react-tiny-fab/dist/styles.css";
 import { FaWhatsapp } from "react-icons/fa6";
 // import { Header, Header2 } from "./components/HeroSection";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   const openWhatsApp = () => {
     const phoneNumber = "+2347038122409"; // Replace with the phone number you want to message

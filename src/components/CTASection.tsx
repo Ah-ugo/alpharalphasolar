@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 import { motion, useScroll, Variants } from "framer-motion";
 import bgImg from "../assets/heroSectionBackground.webp";
-import openingVid from "../assets/headerOpening-2.gif";
+// import openingVid from "../assets/headerOpening-2.gif";
 
 export default function CTASection() {
   return (

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Header2 = () => {
   return (
     <div className="mb-16">

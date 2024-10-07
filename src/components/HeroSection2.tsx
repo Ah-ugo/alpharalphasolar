@@ -1,6 +1,5 @@
-import React from "react";
-import ParticleBackground from "./ParticlesBg/Parallaxpre";
-import { motion, useScroll, Variants } from "framer-motion";
+// import ParticleBackground from "./ParticlesBg/Parallaxpre";
+import { motion } from "framer-motion";
 
 export const Header = () => {
   return (

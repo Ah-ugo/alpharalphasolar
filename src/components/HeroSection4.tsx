@@ -1,8 +1,8 @@
-import React from "react";
-import bgImg from "../assets/heroSectionBackground-2.png";
+// import React from "react";
+// import bgImg from "../assets/heroSectionBackground-2.png";
 import openingVid from "../assets/headerOpening-2.gif";
-import { motion, useScroll, Variants } from "framer-motion";
-import { PiPlayBold, PiPlayFill } from "react-icons/pi";
+import { motion } from "framer-motion";
+import { PiPlayFill } from "react-icons/pi";
 import { BiCart } from "react-icons/bi";
 
 export default function HeroSection4() {

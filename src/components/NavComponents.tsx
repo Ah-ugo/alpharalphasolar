@@ -54,7 +54,7 @@ export default function Navbar() {
           <HStack
             as="nav"
             spacing={6}
-            d={{ base: "none", md: "flex" }}
+            display={{ base: "none", md: "flex" }}
             alignItems="center"
           >
             {navLinks.map((link, index) => (
@@ -109,7 +109,7 @@ export default function Navbar() {
           colorScheme="blue"
           size="md"
           rounded="md"
-          d={{ base: "none", md: "block" }}
+          display={{ base: "none", md: "block" }}
         >
           Sign in
         </Button>
@@ -117,14 +117,14 @@ export default function Navbar() {
           size="md"
           icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
           aria-label="Open Menu"
-          d={{ base: "inherit", md: "none" }}
+          display={{ base: "inherit", md: "none" }}
           onClick={isOpen ? onClose : onOpen}
         />
       </Flex>
 
       {/* Mobile Screen Links */}
       {isOpen ? (
-        <Box pb={4} d={{ base: "inherit", md: "none" }}>
+        <Box pb={4} display={{ base: "inherit", md: "none" }}>
           <Stack as="nav" spacing={2}>
             {navLinks.map((link, index) => (
               <NavLink key={index} {...link} onClose={onClose} />

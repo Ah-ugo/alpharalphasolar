@@ -1,5 +1,5 @@
-import React from "react";
-import { motion, useScroll, Variants } from "framer-motion";
+// import React from "react";
+import { motion } from "framer-motion";
 
 export default function PortfolioCard() {
   return (

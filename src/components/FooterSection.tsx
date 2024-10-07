@@ -1,5 +1,5 @@
 import { Flex, Text } from "@chakra-ui/react";
-import React from "react";
+
 import { GrSolaris } from "react-icons/gr";
 
 export default function FooterSection() {
