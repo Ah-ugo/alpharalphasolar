@@ -252,7 +252,7 @@ export default () => {
               <Flex gap={6}>
                 <GrSolaris color="white" size={30} />
                 <Text className="text-gray-200 text-3xl" fontFamily={"Lalezar"}>
-                  AlfaRalpha Solar
+                  Alfa-Rapha Solar
                 </Text>
               </Flex>
             </a>

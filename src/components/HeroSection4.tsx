@@ -42,7 +42,7 @@ export default function HeroSection4() {
                 className="mb mb-10"
               >
                 <h1 style={{ fontFamily: "Lalezar" }} className="text-white">
-                  <span className="font-normal text-7xl">AlfaRalpha </span>
+                  <span className="font-normal text-7xl">Alpha-Rapha </span>
                   {/* <br /> */}
                   <span className="font-normal text-8xl">Solar</span>
                 </h1>

@@ -14,7 +14,7 @@ export default function FooterSection() {
             <Flex gap={6}>
               <GrSolaris color="black" size={30} />
               <Text className="text-gray-900 text-3xl" fontFamily={"Lalezar"}>
-                AlfaRalpha Solar
+                Alfa-Rapha Solar
               </Text>
             </Flex>
           </a>
