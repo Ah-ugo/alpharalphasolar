@@ -9,7 +9,10 @@ import ParticleBackground from "./ParticlesBg/Parallaxpre";
 export default function HeroSection4() {
   return (
     <ParticleBackground>
-      <div className="relative w-full pt-48 pb-12 xl:pt-50 sm:pb-16 lg:pb-32 xl:pb-48 2xl:pb-56">
+      <div
+        style={{ height: "100%" }}
+        className="relative w-full pt-48 pb-12 xl:pt-50 sm:pb-16 lg:pb-32 xl:pb-48 2xl:pb-56"
+      >
         <div className="absolute inset-0">
           <img className="object-cover w-full h-full" src={openingVid} alt="" />
           {/* <video
