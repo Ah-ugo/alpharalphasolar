@@ -40,7 +40,10 @@ export default function FeaturedItems() {
     },
   };
   return (
-    <section id="featured" className="py-12 bg-white sm:py-16 lg:py-20">
+    <section
+      id="featured"
+      className="py-12 bg-white relative sm:py-16 lg:py-20"
+    >
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-md mx-auto text-center">
           {/* <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">

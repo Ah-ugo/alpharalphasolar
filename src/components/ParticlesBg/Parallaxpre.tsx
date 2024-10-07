@@ -1,70 +1,114 @@
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {
+  type Container,
+  type ISourceOptions,
+  MoveDirection,
+  OutMode,
+} from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
+import { useEffect, useMemo, useState } from "react";
 
-const ParticleBackground = () => {
-  const particlesInit = async (main: any) => {
-    // Load full tsparticles package, if needed for more options
-    await loadFull(main);
+const ParticleBackground = ({ children }: any) => {
+  const [init, setInit] = useState(false);
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
+  const particlesLoaded = (container?: Container): void => {
+    console.log(container);
   };
 
+  const options: ISourceOptions = useMemo(
+    () => ({
+      background: {
+        color: {
+          value: "#111827",
+        },
+      },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: true,
+            mode: "push",
+          },
+          onHover: {
+            enable: true,
+            mode: "repulse",
+          },
+        },
+        modes: {
+          push: {
+            quantity: 4,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: "#ffffff",
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.5,
+          width: 1,
+        },
+        move: {
+          direction: MoveDirection.none,
+          enable: true,
+          outModes: {
+            default: OutMode.out,
+          },
+          random: false,
+          speed: 3,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+          },
+          value: 80,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: "circle",
+        },
+        size: {
+          value: { min: 1, max: 5 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
+
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        // preset: "parallax",
-        background: {
-          color: {
-            value: "#212121", // Background color
-          },
-        },
-        fpsLimit: 60,
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "repulse", // Effect when hovering over particles
-            },
-          },
-        },
-        particles: {
-          color: {
-            value: "#ffffff", // Color of particles
-          },
-          links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            outModes: {
-              default: "bounce",
-            },
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80, // Number of particles
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 5 }, // Particle size
-          },
-        },
-      }}
-    />
+    <div style={{ width: "100%", position: "relative", height: "100vh" }}>
+      <Particles
+        id="tsparticles"
+        options={options}
+        // loaded={particlesLoaded}
+        style={{
+          // position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          // height: "100%",
+        }}
+      />
+      <div style={{ position: "absolute", width: "100%" }}>{children}</div>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import { GrSolaris } from "react-icons/gr";
 
 export default function FooterSection() {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white relative" style={{ zIndex: 2000 }}>
       <div className="container px-6 py-8 mx-auto">
         <div className="flex flex-col items-center text-center">
           <a

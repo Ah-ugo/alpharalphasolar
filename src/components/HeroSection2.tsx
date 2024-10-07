@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Header = () => {
   return (
-    <div className="relative bg-gray-900">
+    <div className="relativ bg-gray-900">
       {/* <ParticleBackground /> */}
       {/* <div className="absolute top-0 left-0 z-10 w-full"> */}
       <div className="absolute inset-x-0 bottom-0">
