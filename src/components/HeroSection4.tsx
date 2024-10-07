@@ -142,7 +142,7 @@ export default function HeroSection4() {
           </div>
         </div>
 
-        <div className="absolute animate-bounce hidden transform -translate-x-1/2 lg:bottom-8 xl:bottom-12 left-1/2 lg:block">
+        <div className="absolute z-50 animate-bounce hidden transform -translate-x-1/2 lg:bottom-8 xl:bottom-12 left-1/2 lg:block">
           <a
             href="#featured"
             title=""
